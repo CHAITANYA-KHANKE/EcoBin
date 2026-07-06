@@ -51,3 +51,15 @@ config.json
 *.png
 *.jpg
 *.jpeg
+
+# Submission decks, scripts, and storyboard files (Keep local only)
+*.pptx
+*.bat
+ppt_presentation_deck.md
+video_recording_storyboard.md
+voiceover_script.md
+demo_guide.md
+walkthrough.md
+task.md
+implementation_plan.md
+
