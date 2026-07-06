@@ -1,0 +1,53 @@
+# Python virtual environment
+venv/
+.venv/
+ENV/
+env/
+
+# Python cache & compiles
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Node dependencies
+frontend/node_modules/
+node_modules/
+
+# Environment configurations and secrets
+backend/.env
+.env
+.env.local
+.env.development
+.env.test
+.env.production
+
+# Local Uploads
+backend/uploads/*
+!backend/uploads/.gitkeep
+
+# IDE and OS files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Project logs/artifacts
+*.log
+C:\Users\chait\.gemini\antigravity-ide\
+brain/
+scratch/
+mcp/
+mcp_config.json
+conversations/
+skills/
+plugins/
+agents/
+hooks.json
+sidecars/
+projects/
+config.json
+*.webp
+*.png
+*.jpg
+*.jpeg
