@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Camera, AlertCircle, FileText, CheckCircle2, User } from 'lucide-react';
+import { API_BASE_URL } from '../config';
 
 export default function Reporter({ complaints, onAddComplaint, onResolveComplaint }) {
   const [description, setDescription] = useState('');
@@ -52,7 +53,7 @@ export default function Reporter({ complaints, onAddComplaint, onResolveComplain
     }
 
     try {
-      const response = await fetch('/api/citizen-report', {
+      const response = await fetch(API_BASE_URL + '/api/citizen-report', {
         method: 'POST',
         body: formData,
       });
@@ -343,11 +344,11 @@ export default function Reporter({ complaints, onAddComplaint, onResolveComplain
                   </div>
                 ) : (
                   <img 
-                    src={`/api/uploads/${selectedTicket.id}.jpg`} 
+                    src={API_BASE_URL + `/api/uploads/${selectedTicket.id}.jpg`} 
                     alt="Citizen Uploaded Evidence" 
                     className="h-full w-full object-cover"
                     onError={(e) => {
-                      e.target.src = `/api/uploads/${selectedTicket.id}.png`;
+                      e.target.src = API_BASE_URL + `/api/uploads/${selectedTicket.id}.png`;
                       e.target.onerror = () => {
                         e.target.style.display = 'none';
                         e.target.parentNode.innerHTML = '<div class="text-center text-slate-500 text-xs">📷 Evidence photo file loaded</div>';

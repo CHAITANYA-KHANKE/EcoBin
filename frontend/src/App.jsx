@@ -76,7 +76,7 @@ export default function App() {
   }, []);
 
   const fetchSystemStatus = () => {
-    fetch('/api/status')
+    fetch(API_BASE_URL + '/api/status')
       .then(res => res.json())
       .then(data => setSystemStatus(data))
       .catch(err => {
@@ -92,7 +92,7 @@ export default function App() {
 
   const fetchDashboardData = (isSilent = false) => {
     if (!isSilent) setRefreshing(true);
-    fetch('/api/dashboard')
+    fetch(API_BASE_URL + '/api/dashboard')
       .then(res => res.json())
       .then(data => {
         setBins(data.bins);
@@ -103,7 +103,7 @@ export default function App() {
         }).filter(Boolean));
         
         // Load direct tickets
-        fetch('/api/complaints')
+        fetch(API_BASE_URL + '/api/complaints')
           .then(r => r.json())
           .then(tickets => {
             setComplaints(tickets);
@@ -130,7 +130,7 @@ export default function App() {
 
   const handleTriggerRouteOptimize = () => {
     setRouteLoading(true);
-    fetch('/api/route-optimize', { method: 'POST' })
+    fetch(API_BASE_URL + '/api/route-optimize', { method: 'POST' })
       .then(res => res.json())
       .then(data => {
         setOptimizedRoute(data.route);
@@ -147,7 +147,7 @@ export default function App() {
   };
 
   const handleResolveComplaint = (ticketId) => {
-    fetch('/api/complaints/resolve', {
+    fetch(API_BASE_URL + '/api/complaints/resolve', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ ticket_id: ticketId })

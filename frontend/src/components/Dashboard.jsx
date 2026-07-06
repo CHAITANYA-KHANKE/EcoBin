@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { ResponsiveContainer, AreaChart, Area, XAxis, YAxis, Tooltip, CartesianGrid } from 'recharts';
 import { Trash2, AlertTriangle, ShieldCheck, Zap, Navigation, Award, Cpu } from 'lucide-react';
+import { API_BASE_URL } from '../config';
 
 export default function Dashboard({ 
   stats, 
@@ -21,7 +22,7 @@ export default function Dashboard({
   useEffect(() => {
     if (!selectedBin) return;
     setForecastLoading(true);
-    fetch(`/api/bins/${selectedBin.id}/predictions`)
+    fetch(API_BASE_URL + `/api/bins/${selectedBin.id}/predictions`)
       .then(res => res.json())
       .then(data => {
         setForecastData(data.predictions);
