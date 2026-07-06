@@ -4,6 +4,7 @@ import MapView from './components/MapView';
 import Dashboard from './components/Dashboard';
 import Reporter from './components/Reporter';
 import ChatBot from './components/ChatBot';
+import { API_BASE_URL } from './config';
 
 export default function App() {
   const [activeTab, setActiveTab] = useState('dashboard');
