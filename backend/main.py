@@ -1,3 +1,4 @@
+import sys
 import os
 import shutil
 import base64
@@ -6,6 +7,9 @@ import urllib.request
 import urllib.error
 from datetime import datetime, timedelta
 from flask import Flask, request, jsonify, abort, send_from_directory
+
+# Support imports when running directly from inside the backend directory
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 from backend.mock_data import (
     generate_smart_bins,
