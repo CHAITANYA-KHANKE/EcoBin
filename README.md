@@ -47,6 +47,24 @@ graph TD
 
 ---
 
+## 🖼️ Prototype Preview
+
+Here are snapshots of the interactive CommunityPulse AI dashboard console:
+
+### 1. Operations Control HUD & Map
+Displays smart bin fill levels, vehicle tracking, and optimal route paths on an interactive map.
+![Operations Control HUD](./images/dashboard_hud.png)
+
+### 2. NVIDIA RAPIDS cuDF & TSP Route Optimizer
+Benchmarks telemetry log queries and calculates real-time traveling salesperson routes.
+![NVIDIA RAPIDS & TSP Routing](./images/route_optimization.png)
+
+### 3. AI Citizen Incident Verification Portal
+Uses computer vision to automatically detect, classify, and rate safety risk factors for public waste piles.
+![AI Citizen Portal Vision](./images/citizen_vision.png)
+
+---
+
 ## 📁 Directory Structure
 Below is the directory tree of the tracked project source code:
 
