@@ -5,6 +5,12 @@ CommunityPulse AI (EcoBin Edition) is a production-ready, focused Decision Intel
 
 This prototype is fully localized for **Chandrapur, Maharashtra, India**, highlighting immediate, localized municipal value.
 
+## 🔗 Live Deployments
+
+* **Live Interactive Dashboard (React)**: [https://ecobin-5u6j.onrender.com/](https://ecobin-5u6j.onrender.com/)
+* **Live Backend API Gateway (Flask)**: [https://ecobin-x0on.onrender.com/api/status](https://ecobin-x0on.onrender.com/api/status)
+* **GitHub Repository**: [https://github.com/CHAITANYA-KHANKE/EcoBin](https://github.com/CHAITANYA-KHANKE/EcoBin)
+
 ---
 
 ## 🗺️ Architectural Workflow
