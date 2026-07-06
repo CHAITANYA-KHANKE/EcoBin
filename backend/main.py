@@ -420,4 +420,7 @@ def chat_with_data():
     return jsonify({"response": answer})
 
 if __name__ == "__main__":
-    app.run(host="127.0.0.1", port=8000, debug=True)
+    # Dynamically bind port for hosting environments (like Render or GCP)
+    import os
+    port = int(os.environ.get("PORT", 8000))
+    app.run(host="0.0.0.0", port=port, debug=False)
